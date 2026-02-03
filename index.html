@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="system">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Chung | UI/UX Designer & Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="glow-overlay"></div>
+
+    <header class="main-header">
+        <div class="header-inner">
+            <div class="header-logo"><strong>Alex Chung</strong></div>
+            <nav class="header-nav">
+                <div class="projects-dropdown">
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <div class="projects-menu">
+                        <a href="javascript:void(0)" onclick="openOverlay('project-moncton')">Unexpected Moncton</a>
+                        <a href="javascript:void(0)" onclick="openOverlay('project-dealmaker')">Dealmaker Pro</a>
+                        <a href="javascript:void(0)" onclick="openOverlay('project-simsafe')">SimsafeXR</a>
+                    </div>
+                </div>
+            </nav>
+            <div class="header-right">
+                <a href="mailto:chungpbc@hotmail.ca" class="contact-btn">
+                    <span>Contact</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="layout-grid">
+            <aside class="sidebar">
+                <div class="profile-section">
+                    <div class="profile-avatar">
+                        <img src="images/ac.png" alt="Alex Chung" class="avatar-img">
+                    </div>
+                    <h1 class="sidebar-name">Alex Chung</h1>
+                    <p class="sidebar-role">UI/UX Designer</p>
+                    <p class="sidebar-bio">I create websites and user interfaces that bridge the gap between complex problems and intuitive digital experiences.</p>
+                    <div class="competencies-wrapper">
+                        <span class="comp-badge">Graphic Design Graduate</span>
+                        <span class="comp-badge">Problem Solver</span>
+                        <span class="comp-badge">Remote Worker</span>
+                        <span class="comp-badge">Creative Thinker</span>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/alexchung-/" target="_blank" class="social-box">
+                        <img src="images/mdi_linkedin.png" alt="LinkedIn" class="social-icon-img">
+                    </a>
+                    <a href="https://www.behance.net/alexchung10" target="_blank" class="social-box">
+                        <img src="images/Image_behance.png" alt="Behance" class="social-icon-img">
+                    </a>
+                </div>
+            </aside>
+
+            <section class="projects-list" id="projects">
+                <article class="project-card" id="project-moncton" onclick="openOverlay('project-moncton')">
+                    <div class="project-image-container">
+                        <img src="images/um clear bg.png" alt="Unexpected Moncton" class="card-img">
+                    </div>
+                    <div class="project-details">
+                        <div class="project-tags">
+                            <span class="comp-badge">Website</span>
+                            <span class="comp-badge">Logo</span>
+                        </div>
+                        <h3 class="project-title">Unexpected Moncton</h3>
+                        <p class="project-description">Conceptualized and created tour booking website</p>
+                        <span class="learn-more-link">Learn More &gt;</span>
+                    </div>
+                </article>
+
+                <article class="project-card" id="project-dealmaker" onclick="openOverlay('project-dealmaker')">
+                    <div class="project-image-container">
+                        <img src="images/dealmakerpro.png" alt="Dealmaker Pro" class="card-img">
+                    </div>
+                    <div class="project-details">
+                        <div class="project-tags">
+                            <span class="comp-badge">UI/UX</span>
+                            <span class="comp-badge">Logo</span>
+                        </div>
+                        <h3 class="project-title">Dealmaker Pro</h3>
+                        <p class="project-description">Conceptualized and created tour booking website</p>
+                        <span class="learn-more-link">Learn More &gt;</span>
+                    </div>
+                </article>
+
+                <article class="project-card" id="project-simsafe" onclick="openOverlay('project-simsafe')">
+                    <div class="project-image-container">
+                        <img src="images/safesimxrweb.png" alt="SimsafeXR" class="card-img">
+                    </div>
+                    <div class="project-details">
+                        <div class="project-tags">
+                            <span class="comp-badge">Website</span>
+                            <span class="comp-badge">Logo</span>
+                        </div>
+                        <h3 class="project-title">SimsafeXR</h3>
+                        <p class="project-description">Conceptualized and created tour booking website</p>
+                        <span class="learn-more-link">Learn More &gt;</span>
+                    </div>
+                </article>
+
+                <footer class="right-column-footer">
+                    <p>Designed in Figma, created with Visual Studio Code.</p>
+                </footer>
+            </section>
+        </div>
+    </main>
+
+<div id="project-overlay" class="overlay-backdrop">
+    <div class="overlay-content">
+        <nav class="overlay-sticky-tab">
+            <div class="tab-inner">
+                <h2 id="overlay-title">Project Title</h2>
+                <div class="tab-actions">
+                    <a id="overlay-live-link" href="#" target="_blank" class="live-btn">Live Site ↗</a>
+                    <button class="close-overlay" onclick="closeOverlay()">✕</button>
+                </div>
+            </div>
+        </nav>
+
+        <div class="overlay-body">
+            <header class="overlay-header">
+                <p id="overlay-subtitle" class="sidebar-role"></p>
+                <div class="overlay-stats-grid" id="overlay-stats">
+                    </div>
+            </header>
+
+            <hr class="overlay-divider">
+
+            <div id="overlay-dynamic-content">
+                </div>
+        </div>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
