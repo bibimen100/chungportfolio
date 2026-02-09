@@ -209,7 +209,7 @@ body {
     border-radius: 10px;
     padding: 24px;
     margin: 30px 0;
-    background: rgba(255, 255, 255, 0.02);
+    background: #16191c;
 }
 .tab-buttons {
     display: flex;
@@ -285,3 +285,4 @@ body {
     .tab-inner { gap: 10px; }
     #overlay-title { font-size: 16px; }
 }
+
